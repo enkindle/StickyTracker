@@ -1,0 +1,16 @@
+// This is a json object that will provide the model for the way the data will be stored for each gecko that a user adds.
+gekko : {
+	"age" : "",
+	"weight" : {
+		"date" : "current weight"
+	},
+	"dateAquired" : "",
+	"type" : {
+		"genus" : "",
+		"species" : "",
+		"commonName" : ""
+	},
+	"sex" : "",
+	"name" : "",
+	"breedingCode" : ""
+}
