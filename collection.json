@@ -1,7 +1,7 @@
 // The collection object that will contain all relevant information concerning a users reptile collection
 
 {
-	"reptiles" : {},
+	"reptiles" : {},	// See the gekko-object for reference
 	"feeding" : {
 		"feeder-types" : {
 			"crickets" : [
@@ -33,6 +33,12 @@
 				]
 			},
 			"prepared-diet"
+		},
+		"schedule" : {
+			"date" : {
+				"feeder-types" : {}
+			}
 		}
-	}
+	},
+	"cleaning":  {}
 }
