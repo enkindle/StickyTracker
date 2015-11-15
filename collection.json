@@ -1,0 +1,38 @@
+// The collection object that will contain all relevant information concerning a users reptile collection
+
+{
+	"reptiles" : {},
+	"feeding" : {
+		"feeder-types" : {
+			"crickets" : [
+				"pinheads",
+				"1 week",
+				"2 week",
+				"3 week",
+				"4 week",
+				"5 week"
+			],
+			"worms" : [
+				"mealworms",
+				"kingworms",
+				"superworms",
+				"butterworms",
+				"silkworms",
+				"hornworms",
+				"waxworms"
+			],
+			"mice" : {
+				"size" : [
+					"pinky"
+				]
+			},
+			"rats" : {
+				"size" : [
+					"pup",
+					"fuzzie"
+				]
+			},
+			"prepared-diet"
+		}
+	}
+}
