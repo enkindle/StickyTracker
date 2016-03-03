@@ -1,0 +1,28 @@
+{
+  "name": "gekkotrakr",
+  "version": "1.0.0",
+  "description": "A application that will allow the user to track and record the reptiles in their collection",
+  "main": "webapp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enkindle/gekkotrakr.git"
+  },
+  "keywords": [
+    "Gekko",
+    "Reptiles",
+    "MERN",
+    "React"
+  ],
+  "author": "James Hansen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enkindle/gekkotrakr/issues"
+  },
+  "homepage": "https://github.com/enkindle/gekkotrakr#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
