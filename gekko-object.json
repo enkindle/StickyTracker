@@ -2,7 +2,7 @@
 gekko : {
 	"age" : "",
 	"weight" : {
-		"date" : "current weight"
+		"date" : "weight"
 	},
 	"dateAquired" : "",
 	"type" : {
