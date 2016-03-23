@@ -65,7 +65,7 @@ var GeckoCard = React.createClass({
 		            	<span>{this.props.gecko.type.commonName}</span>
 		            </div>
 		            <div className="action">
-		            	<a href='#'>Where this leads</a>
+		            	<a href='#'>View More</a>
 		            </div>
 	            </div>
             </div>
@@ -86,12 +86,57 @@ var GeckoCards = React.createClass({
 	}
 });
 
-// Gecko container
-var Geckos  = React.createClass({
+// add a bug component
+var GeckoAdd = React.createClass({
 	render: function(){
 		return (
-			<GeckoCards geckos={ gekkoData } />
+			<div className="row">
+				<form name="geckoAdd">
+					<input type="text" name="name" placeholder="Name" />
+					<input type="text" name="commonName" placeholder="Common Name" />
+					<button onClick={this.handleSubmit}>Add A Gecko</button>
+				</form>
+			</div>
 		)
+	},
+
+	handleSubmit: function(e){
+		e.preventDefault();
+		var form = document.forms.geckoAdd;
+		this.props.addGecko({ name: form.name.value, commonName: form.commonName.value, gekkoImage: "img/geckos/crested-gecko-image.jpg" });
+		// Clear the form values
+		form.name.value = '';
+		form.commonName.value = '';
+	}
+});
+
+// Gecko container
+var Geckos  = React.createClass({
+	getInitialState : function(){
+		return (
+			{ geckos: gekkoData }
+		)
+	},
+
+	render: function(){
+		return (
+			<div>
+				<GeckoCards geckos={ this.state.geckos } />
+				<GeckoAdd addGecko={ this.addGecko } />
+			</div>
+		)
+	},
+
+	addGecko: function(addedGecko){
+		var geckosModified = this.state.geckos.slice(),
+			gecko = {};
+		gecko.id = this.state.geckos.length + 1;
+		gecko.name = addedGecko.name;
+		gecko.type = {};
+		gecko.type.commonName = addedGecko.commonName;
+		gecko.gekkoImage = addedGecko.gekkoImage;
+		geckosModified.push(gecko);
+		this.setState({ geckos: geckosModified });
 	}
 });
 
