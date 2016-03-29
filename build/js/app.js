@@ -158,9 +158,9 @@ var Geckos = React.createClass({
 	addGecko: function (addedGecko) {
 		var geckosModified = this.state.geckos.slice(),
 		    gecko = {};
+		gecko.type = {};
 		gecko.id = this.state.geckos.length + 1;
 		gecko.name = addedGecko.name;
-		gecko.type = {};
 		gecko.type.commonName = addedGecko.commonName;
 		gecko.gekkoImage = addedGecko.gekkoImage;
 		geckosModified.push(gecko);
